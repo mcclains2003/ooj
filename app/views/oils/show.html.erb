@@ -1,0 +1,12 @@
+<h3>
+  <%= @oil.name %>
+</h3>
+
+<p>
+  <%= @oil.description %>
+</p>
+
+<%= link_to("Edit", edit_oil_path(@oil)) %> | 
+<%= link_to("All Oils", oils_path) %> | 
+<%= link_to("Delete", @oil,
+            method: :delete, data: { confirm: "Are you sure?" }) %>

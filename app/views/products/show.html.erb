@@ -1,0 +1,16 @@
+<h1><%= @product.name %></h1>
+
+<h3>Description</h3>
+<p><%= @product.description %></p>
+
+<h3>Product Oils</h3>
+  <ul>
+    <% @oils.each do |oil| %>
+      <li><%= oil.name %></li>
+    <% end %>
+  </ul>
+
+<%= link_to("All Products", products_path) %> | 
+<%= link_to("Edit", edit_product_path) %> | 
+<%= link_to("Delete", @product,
+            method: :delete, data: { confirm: "Are you sure?" }) %>

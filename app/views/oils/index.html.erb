@@ -1,0 +1,12 @@
+<h1>Essential Oils</h1>
+
+<ul>
+  <% @oils.each do |oil| %>
+    <li>
+      <h3><%= link_to(oil.name, oil) %></h3>
+      <%= oil.description %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to("Add new oil", new_oil_path) %>
